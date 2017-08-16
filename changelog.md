@@ -2,7 +2,7 @@
 
 All Notable changes will be documented in this file.
 
-## Version 1.0 - to be released
+## Version 1.0
 
 ### Added
 - GuestPass Laravel service
