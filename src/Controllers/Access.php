@@ -27,7 +27,7 @@ class Access extends BaseController
             }
         // If there is a view handle saved, check if the file exists.
         } elseif (file_exists(resource_path('views/guests/'.$pass->view.'.blade.php'))) {
-            return view('guests/'.$$pass->view, ['object' => $object]);
+            return view('guests/'.$$pass->view, ['object' => $object, 'guestpass' => $pass]);
         }
         // In case neither exists, abort.
         abort(404);

@@ -60,12 +60,17 @@ class GuestPassService
         return $owner->id == $guestpass->owner_id;
     }
 
+    /**
+     * Get all keys belonging to the owner.
+     * @param  lluminate\Database\Eloquent\Model  $owner
+     * @return array
+     */
     public function getKeysOf(Model $owner)
     {
         return GuestPass::where([
             'owner_id' => $owner->id,
             'owner_model' => get_class($owner),
-        ])->get();
+        ])->get()->keyBy('key');
     }
 
     /**

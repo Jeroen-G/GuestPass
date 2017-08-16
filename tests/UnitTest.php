@@ -7,16 +7,6 @@ use JeroenG\GuestPass\Tests\Fakes\Photo;
 
 class UnitTest extends BaseTestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
-    {
-        $this->assertTrue(true);
-    }
-
     public function test_create_guestpass()
     {
         $this->assertTrue(
@@ -46,7 +36,7 @@ class UnitTest extends BaseTestCase
         $this->assertTrue(
             $this->guestpass()->getKeysOf($user)->contains(function ($item) {
                 return $item->object_id == 92;
-            }));
+        }));
     }
 
     public function test_find()
