@@ -34,7 +34,7 @@ Returns true if successfull, false otherwise.
 
 ### Retrieving Guest Pass data
 
-A Guest Pass contains the following data: `owner_model`, `owner,id`; `object_model`, `object_id`; `key` (unique); `view` (nullable).
+A Guest Pass contains the following data: `owner_model`, `owner_id`; `object_model`, `object_id`; `key` (unique); `view` (nullable).
 
 #### Getting all keys of the owner
 Requires the owner model.
